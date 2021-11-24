@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    Bean created for Scores Class-->
+    <bean name="items" class="com.kyle.spring.springcore.shoppingcart.Item" p:id="1" p:name="Apple" p:price="1.25"
+          p:quantity="10"
+
+    />
+
+    <!--    Bean created for Student class injected the scores field into it-->
+    <bean name="shoppingcart" class="com.kyle.spring.springcore.shoppingcart.ShoppingCart" p:item-ref="items"/>
+
+</beans>
